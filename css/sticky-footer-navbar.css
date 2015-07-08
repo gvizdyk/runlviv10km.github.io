@@ -1,13 +1,17 @@
 h1 {
   font-family: 'Open Sans Condensed', sans-serif;
 }
+h2,
+h3 {
+  font-family:Georgia, serif;
+}
 h4{
-  font:200 30px 'Open Sans', sans-serif;
+  font:200 30px Georgia, serif;
   margin-bottom: 0.5em;
   text-transform: uppercase;
   }
 h6{
-  font: 20px 'Open Sans', sans-serif;
+  font: 20px Georgia, serif;
   text-transform: uppercase;
   }
 code {

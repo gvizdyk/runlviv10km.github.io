@@ -21,6 +21,9 @@ code {
 a {
   color: #AE292A;
 }
+.hiddenStructure {
+  display: none;
+}
 
 /*----- Header -----*/
 .portal-header {

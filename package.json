@@ -1,0 +1,11 @@
+{
+  "name": "runlviv10km.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-cli":"0.1.13",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}

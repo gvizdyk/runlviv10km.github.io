@@ -37,6 +37,21 @@
 
     <link href="css/lvivtenrunning.css" rel="stylesheet">
 
+    <script type="text/javascript">
+      jQuery(window).load(function() {
+          $(".globalnav-toggle").click(function() {
+              $("#globalnav").toggleClass("open");
+              $(this).toggleClass("open");
+          });
+          $(window).resize(function() {
+        if ($(window).width() > 768) {
+            $("#globalnav").removeClass('open');
+            $(".globalnav-toggle").removeClass('open');
+        }
+          });
+      });
+    </script>
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- script src="../../assets/js/ie-emulation-modes-warning.js"></script -->
@@ -48,62 +63,12 @@
     <![endif]-->
   </head>
 
-  <body>
-
-    <!-- Fixed navbar -->
-    <!-- <nav class="navbar navbar-default navbar-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <img alt="Brand" src="images/logo.png" class="navbar-left site-logo" height="30">
-            Спортивний клуб "Ультра"
-          </a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Головна</a></li>
-            <li><a href="#news">Новини</a></li>
-            <li><a href="#events">Події</a></li>
-            <li><a href="#contacts">Контакти</a></li>
-            <li><a href="#about">Про нас</a></li>
-          </ul>
-
-          <ul class="social-buttons navbar-right">
-            <li class="social-button-item">
-              <a class="btn-social-icon" href="https://www.facebook.com/sportclubultra"target="_blank">
-                <i class="fa fa-facebook"></i>
-              </a>
-            </li>
-            <li class="social-button-item">
-              <a class="btn-social-icon" href="https://plus.google.com/+ClubUltraUaRUN/posts" target="_blank">
-                <i class="fa fa-google-plus"></i>
-              </a>
-            </li>
-            <li class="social-button-item">
-              <a class="btn-social-icon" href="https://twitter.com/sc_ultra" target="_blank">
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="social-button-item">
-              <a class="btn-social-icon" href="http://vk.com/sportclubultra" target="_blank">
-                <i class="fa fa-vk"></i>
-              </a>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </nav> -->
+  <body class="front-page">
 
 <div itemscope itemtype="http://schema.org/SportsEvent">
   <header class="jumbotron portal-header">
     <div class="container">
+
       <div class="d" itemprop="startDate" content="2015-09-20T12:00">
         <div class="d1">20</div>
         <div class="d2">вересня</div>
@@ -114,6 +79,23 @@
           <span class="hiddenStructure" itemprop="name">Центральна частина міста</span>
         </div>
       </div>
+
+      <button class="globalnav-toggle">
+        <span class="icon-bar icon-bar-first"></span>
+        <span class="icon-bar icon-bar-second"></span>
+        <span class="icon-bar icon-bar-third"></span>
+      </button>
+
+      <ul id="globalnav">
+        <li class="active"><a href="#">Головна</a></li>
+        <li><a href="#reglament">Положення</a></li>
+        <li><a href="#pressrelease">Прес-реліз</a></li>
+        <!-- <li><a href="#news">Новини</a></li> -->
+        <li><a href="#results">Результати</a></li>
+        <li><a href="#photo">Фото/відео</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+
       <div class="clearfix"></div>
       <h1 itemprop="name">Львівська десятка</h1>
       <div class="clearfix"></div>
@@ -416,7 +398,7 @@
 
       $(document).ready(function() {
         // Set dates.
-        var futureDate  = new Date("September 20, 2015 12:00 PM EDT");
+        var futureDate  = new Date("September 20, 2015 12:00 AM EDT");
         var currentDate = new Date();
 
         // Calculate the difference in seconds between the future and current date

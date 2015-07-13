@@ -36,6 +36,9 @@ a {
   min-height: 600px;
   color: #fff;
   padding: 0 0 48px;
+    .container {
+      position: relative;
+    }
   }
 
 .register-info {
@@ -274,3 +277,70 @@ padding: 0;
   filter: none;
   -webkit-filter: grayscale(0);
   }*/
+
+
+// Global Navigation
+.globalnav-toggle {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0;
+  cursor: pointer;
+  display: block;
+  left: 15px;
+  padding: 8px 10px;
+  position: absolute;
+  top: 8px;
+  border-radius: 6px;
+  &.open {
+    border-radius: 6px 6px 0 0;
+    background-color: #ae292a;
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+ .icon-bar {
+    background-color: #333;
+    display: block;
+    height: 4px;
+    margin: 4px 0 4px;
+    width: 30px;
+  }
+}
+#globalnav {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  padding: 0;
+  position: absolute;
+  top: 52px;
+  text-align: left;
+  &.open {
+    display: block;
+  }
+  li {
+    display: block;
+    &.active a {
+      background-color: #ae292a;
+      border-color: #ae292a;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  a {
+    font-weight: bold;
+    box-sizing: border-box;
+    border-color: #333;
+    border-style: solid;
+    border-width: 0 0 1px;
+    color: #333;
+    display: block;
+    padding: 12px 25px 10px;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 250px;
+    &:hover {
+      background-color: #ae292a;
+      border-color: #ae292a;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

@@ -9,6 +9,7 @@ baseurl: "http://gvizdyk.github.io/runlviv10km.github.io" # the subpath of your 
 url: "" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
+permalink: none
 
 # Build settings
 markdown: kramdown

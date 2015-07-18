@@ -41,6 +41,45 @@ a {
     }
   }
 
+
+
+
+.language-selector {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  li {
+    display: inline-block;
+  }
+  a {
+    padding: 7px 12px;
+    display: block;
+    color: #333;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    &:hover {
+      background-color: #fff;
+      text-decoration: none;
+      color: #333;
+    }
+    &.active {
+      background-color: #fff;
+      color: #333;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 .register-info {
   background-image: url(../images/register-bg.jpg);
   -webkit-background-size: cover;

@@ -43,7 +43,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/flipclock.js"></script>
+    <script src="{{ "/js/flipclock.js" | prepend: site.baseurl | prepend: site.url }}"
+    ></script>
 
 
 
@@ -64,13 +65,8 @@
       });
     </script>
 
-    <script src="{{ "js/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 
-
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!-- script src="../../assets/js/ie-emulation-modes-warning.js"></script -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

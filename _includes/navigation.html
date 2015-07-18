@@ -1,0 +1,24 @@
+<button class="globalnav-toggle">
+  <span class="icon-bar icon-bar-first"></span>
+  <span class="icon-bar icon-bar-second"></span>
+  <span class="icon-bar icon-bar-third"></span>
+</button>
+
+<!-- <ul>
+  <li class="active"><a href="#">Головна</a></li>
+  <li><a href="#reglament">Положення</a></li>
+  <li><a href="#pressrelease">Прес-реліз</a></li>
+  <li><a href="#news">Новини</a></li>
+  <li><a href="#results">Результати</a></li>
+  <li><a href="#photo">Фото/відео</a></li>
+  <li><a href="#contacts">Контакти</a></li>
+</ul> -->
+
+{% assign posts=site.posts | where:"lang", page.lang | sort: 'path' %}
+<ul id="globalnav">
+{% for post in posts %}
+    <li class="lang">
+        <a href="{{site.baseurl}}{{post.url}}" class="button {{ post.lang }}">{{ post.menu_title }}</a>
+    </li>
+{% endfor %}
+</ul>

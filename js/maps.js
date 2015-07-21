@@ -11,7 +11,7 @@ function initialize() {
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     var latlngbounds = new google.maps.LatLngBounds();
-    $.getJSON("points.json", {}, function(data) {
+    $.getJSON("../json/points.json", {}, function(data) {
         $.each(data.places, function(i, item) {
             var icon = "";
             switch (item.icon) {

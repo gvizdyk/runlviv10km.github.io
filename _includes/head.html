@@ -3,11 +3,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head> -->
   <head>
@@ -16,19 +16,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="'Львівська десятка' - традиційні змагання із бігу по шосе на 10 кілометрів. Федерація легкої атлетики України надала цим змаганням статусу Чемпіонату України. Поряд із професіоналами мають змогу позмагатись усі охочі любителі бігу!">
     <meta name="author" content="https://www.facebook.com/sportclubultra" />
-    <link rel="canonical" href="http://lvivskadesiatka.org.ua/ua/" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <!-- Facebook -->
     <meta property="og:locale" content="ua_UK" />
-    <!-- <meta property="og:locale:alternate" content="en_US" />
-    <meta property="og:locale:alternate" content="pl_PL" /> -->
-    <meta property="og:title" content="Львівська десятка - традиційні змагання із бігу по шосе на 10 кілометрів." />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:description" content="Федерація легкої атлетики України надала цим змаганням статусу Чемпіонату України. Поряд із професіоналами мають змогу позмагатись усі охочі любителі бігу." />
     <meta property="og:site_name" content="Львівська десятка" />
     <meta property="og:url" content="http://lvivskadesiatka.org.ua/ua/" />
     <meta property="og:type" content="website" />
     <meta property="article:publisher" content="https://www.facebook.com/sportclubultra" />
-    <meta property="article:author" content="https://www.facebook.com/yaroslav.kondyukh" />
+    <meta property="article:author" content="https://www.facebook.com/sportclubultra" />
     <meta property="article:tag" content="Львівська десятка" />
     <meta property="article:tag" content="Спортивна подія" />
     <meta property="article:tag" content="Біг" />
@@ -39,7 +39,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@sc_ultra" />
-    <meta name="twitter:title" content="Львівська десятка - традиційні змагання із бігу по шосе на 10 кілометрів." />
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:description" content="Федерація легкої атлетики України надала цим змаганням статусу Чемпіонату України. Поряд із професіоналами мають змогу позмагатись усі охочі любителі бігу!" />
     <meta name="twitter:image" content="http://lvivskadesiatka.org.ua/images/lvivska-desiatka.jpg" />
 
@@ -63,7 +63,6 @@
     <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Львівська десятка - традиційні змагання із бігу по шосе на 10 кілометрів.</title>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>

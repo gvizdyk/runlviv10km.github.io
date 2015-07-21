@@ -5,6 +5,7 @@ var arrInfoWindows = [];
 function initialize() {
     var mapOptions = {
         zoom: 14,
+        scrollwheel: false,
         center: new google.maps.LatLng(49.839996, 24.036611),
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };

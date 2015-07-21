@@ -23,7 +23,7 @@ function initialize() {
                 position: new google.maps.LatLng(item.lat, item.lng),
                 map: map,
                 title: item.title,
-                icon: "/images/point-" + icon + ".png"
+                icon: "http://lvivskadesiatka.org.ua/images/point-" + icon + ".png"
             });
             latlngbounds.extend(new google.maps.LatLng(item.lat, item.lng));
             arrMarkers[i] = marker;

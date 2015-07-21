@@ -11,7 +11,7 @@ function initialize() {
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     var latlngbounds = new google.maps.LatLngBounds();
-    $.getJSON("points.json", {}, function(data) {
+    $.getJSON("../json/points.json", {}, function(data) {
         $.each(data.places, function(i, item) {
             var icon = "";
             switch (item.icon) {
@@ -23,7 +23,7 @@ function initialize() {
                 position: new google.maps.LatLng(item.lat, item.lng),
                 map: map,
                 title: item.title,
-                icon: "/images/point-" + icon + ".png"
+                icon: "http://lvivskadesiatka.org.ua/images/point-" + icon + ".png"
             });
             latlngbounds.extend(new google.maps.LatLng(item.lat, item.lng));
             arrMarkers[i] = marker;

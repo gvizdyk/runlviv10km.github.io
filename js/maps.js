@@ -20,7 +20,7 @@ function initialize() {
                     break;
             }
             var iconImg = {
-                url: "images/point-" + icon + ".png",
+                url: "http://lvivskadesiatka.org.ua/images/point-" + icon + ".png",
                 // This marker is 20 pixels wide by 32 pixels tall.
                 size: new google.maps.Size(29, 40)
                 // The origin for this image is 0,0.

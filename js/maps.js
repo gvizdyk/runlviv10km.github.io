@@ -18,7 +18,7 @@ function initialize() {
                 case "start":
                     icon = "start";
                     break;
-            };
+            }
             var iconImg = {
                 url: "images/point-" + icon + ".png",
                 // This marker is 20 pixels wide by 32 pixels tall.

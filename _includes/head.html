@@ -10,11 +10,11 @@
 
     <!-- Facebook -->
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="og:site_name" content="Львівська десятка" />
+    <meta property="og:site_name" content="{{ page.site_title }}" />
     <meta property="og:url" content="http://lvivskadesiatka.org.ua/ua/" />
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:locale" content="{{ page.locale }}" />
     <meta property="og:image" content="http://lvivskadesiatka.org.ua/images/lvivska-desiatka.jpg" />
 
     <!-- Twitter -->

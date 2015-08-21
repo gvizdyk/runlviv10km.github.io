@@ -36,19 +36,22 @@ a {
   min-height: 600px;
   color: #fff;
   padding: 0 0 48px;
-    .container {
-      position: relative;
-    }
+  .container {
+    position: relative;
   }
+}
 
 
 
 
 .language-selector {
   list-style: none;
-  margin: 0;
+  margin: 1em 0;
   padding: 0;
-  position: absolute;
+  @media (min-width: 420px) {
+    position: absolute;
+    margin: 0;
+  }
   top: 15px;
   right: 0;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -80,18 +83,14 @@ a {
 
 
 
-.register-info {
-  background-image: url(../images/register-bg.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-  text-shadow: 1px 1px 0px #fff;
-  color: #000;
-/*  min-height: 600px;
-  color: #fff;*/
-  /*padding: 0 0 48px;*/
-  }
+.section-even {
+  background-color: @navbar-default-bg;
+  background-image: linear-gradient(-45deg,
+    rgba(255, 255, 255, 0.5) 14%, transparent 14%, transparent 50%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.5) 64%, transparent 64%, transparent);
+  background-size: 20px 20px;
+}
 
 .portal-header .d {
   background-color: rgba(174, 41, 42, 1);
@@ -129,6 +128,7 @@ a {
   padding: 10px 10px 12px;
   border-radius: 6px;
   margin: 80px 0 60px;
+  font-size: 63px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
   }
 
@@ -146,15 +146,45 @@ margin: 26px 0px 20px;
 
 
 
+// Section Oorganizers
+#section-organizers {
+  padding-bottom: 30px;
+  .portrait {
+    border-radius: 50%;
+    border: 10px solid #fff;
+    height: auto;
+    width: 250px;
+  }
+}
+
+// Section Register
+#section-register {
+  h1 {
+    margin-bottom: 35px;
+  }
+}
+
+// Section Paid
+#section-paid {
+  @media (min-width:959px) {
+    width: 960px;
+  }
+  h1 {
+    margin-bottom: 35px;
+  }
+}
+
 
 
 .content-info {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   padding: 28px 0;
-}
-.content-info .container {
-  width: 960px;
+  @media (min-width:959px) {
+    .container {
+      width: 960px;
+    }
+  }
 }
 
 .maps-info-w {
@@ -166,9 +196,7 @@ margin: 26px 0px 20px;
 
         #map-canvas {
             margin: 0px;
-            padding: 0px
-        }
-        #map-canvas {
+            padding: 0px;
             height: 600px;
         }
 
@@ -190,9 +218,12 @@ padding: 0;
 
 .container.info {
   font-family: 'Open Sans', sans-serif;
-  width: 960px;
-    padding: 28px 0 50px;
-    font-size: 21px;
+  padding-top: 28px;
+  padding-bottom: 50px;
+  font-size: 21px;
+  @media (min-width:959px) {
+    width: 960px;
+  }
 }
 
 

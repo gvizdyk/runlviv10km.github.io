@@ -33,7 +33,7 @@ permalink: /pl
 <div class="front-page">
 
   <div itemscope itemtype="http://schema.org/SportsEvent">
-    <div class="hiddenStructure" itemprop="startDate" content="2015-09-20T12:00">
+    <div class="hiddenStructure" itemprop="startDate" content="2015-09-20T09:00">
       <div class="d3" itemprop="location" itemscope itemtype="http://schema.org/Place">
         <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <span itemprop="addressLocality">Lwów</span>
@@ -46,7 +46,7 @@ permalink: /pl
     <article class="content-info">
       <div class="container">
         <p class="lead">"Lwowska dziesiątka" - tradycyjne zawody biegowe po szosie na 10 kilometrów. <span itemprop="description">Federacja lekkiej atletyki Ukrainy udzieliła tym zawodom status Mistrzostwa Ukrainy.</span>. Razem z zawodowcami mogą rywalizować też amatorzy biegu!</p>
-        <p class="lead">Start o 12 godzinie, uroczyste nagrodzenie o <span itemprop="endDate" content="2015-09-20T16:00">15</span>.</p>
+        <p class="lead">Start o 9 godzinie, uroczyste nagrodzenie o <span itemprop="endDate" content="2015-09-20T11:30">11:30</span>.</p>
         <div class="row">
           <h2>Do uczestnictwa w zawodach niezbędne jest:</h2>
           <div class="col-sm-6 col-md-4">
@@ -140,12 +140,12 @@ permalink: /pl
               </td>
             </tr>
             <tr itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-              <th scope="row">2</th>
+              <th scope="row"><s>2</s></th>
               <td>
-                <span itemprop="price">180</span>
+                <span itemprop="price"><s>180</s></span>
                 <meta itemprop="priceCurrency" content="UAH" />hrywien</td>
               <td>
-                od 20 lipca do 6 września 2015
+                <s>od 20 lipca do 6 września 2015</s>
                 <meta itemprop="priceValidUntil" content="2015-09-05T23:59:59+02:00" />
                 <link itemprop="url" href="http://ua.runstyle.com.ua/tournament_view.php?tid=17" />
               </td>
@@ -263,7 +263,7 @@ permalink: /pl
 
     $(document).ready(function() {
       // Set dates.
-      var futureDate  = new Date("September 20, 2015 12:00 AM EDT");
+      var futureDate  = new Date("September 20, 2015 02:00 AM EDT");
       var currentDate = new Date();
 
       // Calculate the difference in seconds between the future and current date

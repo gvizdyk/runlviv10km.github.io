@@ -9,4 +9,113 @@ categories: ua
 date: 2015-09-22 02:07:21
 ---
 
-test1
+<div ng-app="sortApp" ng-controller="mainController">
+
+	<form>
+	  <div class="form-group">
+	    <div class="input-group">
+	      <div class="input-group-addon"><i class="fa fa-search"></i></div>
+	      <input type="text" class="form-control" placeholder="Швидкий пошук" ng-model="searchName">
+	    </div>
+	  </div>
+	</form>
+
+	<table class="table table-hover table-striped table-results">
+
+	  <thead>
+	    <tr>
+	      <!-- <th>
+	        <a href="#result-page" ng-click="sortType = 'year'; sortReverse = !sortReverse">
+	        Рік <small>year</small>
+	          <span ng-show="sortType == 'year' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'year' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th> -->
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'registration_number'; sortReverse = !sortReverse">
+	        Стартовий<br /> номер <small>BIB</small>
+	          <span ng-show="sortType == 'registration_number' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'registration_number' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+	          Учасник <small>Name</small>
+	          <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'rank'; sortReverse = !sortReverse">
+	          Місце <small>Place</small>
+	          <span ng-show="sortType == 'rank' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'rank' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'category'; sortReverse = !sortReverse">
+	          Категорія <small>category</small>
+	          <span ng-show="sortType == 'category' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'category' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'rank_category'; sortReverse = !sortReverse">
+	          Місце в<br /> категорії
+	          <span ng-show="sortType == 'rank_category' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'rank_category' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'time'; sortReverse = !sortReverse">
+	          Час  <small>time</small>
+	          <span ng-show="sortType == 'time' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'time' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'city'; sortReverse = !sortReverse">
+	          Місто  <small>City</small>
+	          <span ng-show="sortType == 'city' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'city' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'club'; sortReverse = !sortReverse">
+	          Клуб  <small>club</small>
+	          <span ng-show="sortType == 'club' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'club' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	      <th>
+	        <a href="#result-page" ng-click="sortType = 'country'; sortReverse = !sortReverse">
+	          Країна <small>Country</small>
+	          <span ng-show="sortType == 'country' && !sortReverse" class="fa fa-caret-down"></span>
+	          <span ng-show="sortType == 'country' && sortReverse" class="fa fa-caret-up"></span>
+	        </a>
+	      </th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchName">
+	      <!-- <td><strong>{{ roll.year }}</strong></td> -->
+	      <td>{{ roll.registration_number }}</td>
+	      <td>{{ roll.name }}</td>
+	      <td>{{ roll.rank }}</td>
+	      <td>{{ roll.category }}</td>
+	      <td>{{ roll.rank_category }}</td>
+	      <td>{{ roll.time }}</td>
+	      <td>{{ roll.city }}</td>
+	      <td>{{ roll.club }}</td>
+	      <td>{{ roll.country }}</td>
+	    </tr>
+	  </tbody>
+
+	</table>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script src="https://code.angularjs.org/1.3.10/i18n/angular-locale_uk.js"></script>

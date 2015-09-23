@@ -5,7 +5,7 @@ angular.module('sortApp', [])
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchName   = '';     // set the default search/filter term
   
-  $http.get('json/results.json').then(function(res){
+  $http.get('http://lvivskadesiatka.org.ua/json/results.json').then(function(res){
     $scope.sushi = res.data;
   });
 

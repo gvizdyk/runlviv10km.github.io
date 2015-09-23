@@ -5,10 +5,8 @@ title: Результати 2015
 description: Результати 2015 Львівської десятки
 menu_title: Результати 2015
 site_title: Результати 2015 Львівської десятки
-locale: uk_UA
-categories: index ua
+categories: ua
 date: 2015-09-22 02:07:21
-permalink: /results-2015/
 ---
 
-test
+test1

@@ -7,6 +7,7 @@ App.config([
 ]);
 
 App.controller('mainController', function($scope, $http, $filter) {
+  $scope.sushi = [];
   $scope.sortType     = 'rank'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchName   = '';     // set the default search/filter term

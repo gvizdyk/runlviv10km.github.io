@@ -1,7 +1,13 @@
-angular.module('sortApp', [])
+var App = angular.module('sortApp', [])
 
-.controller('mainController', function($scope, $http) {
-  $scope.sortType     = 'year'; // set the default sort type
+App.config([
+    '$interpolateProvider', function($interpolateProvider) {
+        return $interpolateProvider.startSymbol('{(').endSymbol(')}');
+    }
+]);
+
+App.controller('mainController', function($scope, $http) {
+  $scope.sortType     = 'rank'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchName   = '';     // set the default search/filter term
   

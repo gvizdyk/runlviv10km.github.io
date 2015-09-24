@@ -8,9 +8,9 @@ App.config([
 
 App.controller('mainController', function($scope, $http, $filter) {
   $scope.sushi = [];
-  // $scope.sortType     = 'rank'; // set the default sort type
-  // $scope.sortReverse  = false;  // set the default sort order
-  // $scope.searchName   = '';     // set the default search/filter term
+  $scope.sortType     = 'rank'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+  $scope.searchName   = '';     // set the default search/filter term
   
   $http.get('http://lvivskadesiatka.org.ua/json/results.json').then(function(res){
     $scope.sushi = res.data;
@@ -18,7 +18,6 @@ App.controller('mainController', function($scope, $http, $filter) {
 
 	$scope.filterWIthSearch = function() {
 	    var items = $filter('filter')($scope.sushi, ($scope.search||{}).category||"");
-	    items = $filter('orderBy')(items, 'rank', false);
 	    return items;
 	};
 

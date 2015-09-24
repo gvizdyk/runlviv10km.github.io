@@ -155,7 +155,7 @@ date: 2015-09-22 02:07:21
           </thead>
 
           <tbody>
-            <tr ng-repeat="nitem in filterWIthSearch()">
+            <tr ng-repeat="nitem in filterWIthSearch() | orderBy:sortType:sortReverse | filter:searchName">
               <td>{( nitem.registration_number )}</td>
               <td>{( nitem.name )}</td>
               <td>{( nitem.rank )}</td>

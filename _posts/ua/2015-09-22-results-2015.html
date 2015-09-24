@@ -5,7 +5,7 @@ title: Результати Львівської десятки 2015
 description: Нагадаємо, що 20 вересня у Львові відбулися традиційні всеукраїнські змагання "Львівська десятка", в рамках яких пройшов чемпіонат України з бігу по шосе на 10 км. Запрошуємо Вас ознайомитись з результатами спортсменів.
 menu_title: Результати Львівської десятки 2015
 site_title: Нагадаємо, що 20 вересня у Львові відбулися традиційні всеукраїнські змагання "Львівська десятка", в рамках яких пройшов чемпіонат України з бігу по шосе на 10 км. Запрошуємо Вас ознайомитись з результатами спортсменів.
-categories: ua
+category: ua
 date: 2015-09-22 02:07:21
 ---
 
@@ -21,6 +21,66 @@ date: 2015-09-22 02:07:21
 			        </div>
 			      </div>
 			    </form>
+
+
+          <form name="filterCat" id="filterCat">
+              <h4>Фільтр по категоріях</h4>
+              <div class="cat-item">
+                  <input value="f-18-29" id="f-18-29" type="checkbox" data-ng-model='search.category' data-ng-true-value="'F-18-29'">
+                  <label for="f-18-29">F-18-29</label>
+              </div>
+              <div class="cat-item">
+                  <input value="f-30-39" id="f-30-39" type="checkbox" data-ng-model='search.category' data-ng-true-value="'F-30-39'">
+                  <label for="f-30-39">F-30-39</label>
+              </div>
+              <div class="cat-item">
+                  <input value="f-40-49" id="f-40-49" type="checkbox" data-ng-model='search.category' data-ng-true-value="'F-40-49'">
+                  <label for="f-40-49">F-40-49</label>
+              </div>
+              <div class="cat-item">
+                  <input value="f-50-59" id="f-50-59" type="checkbox" data-ng-model='search.category' data-ng-true-value="'F-50-59'">
+                  <label for="f-50-59">F-50-59</label>
+              </div>
+              <div class="cat-item">
+                  <input value="f-50-59" id="f-50-59" type="checkbox" data-ng-model='search.category' data-ng-true-value="'F-50-59'">
+                  <label for="f-50-59">F-50-59</label>
+              </div>
+
+
+
+              <div class="cat-item">
+                  <input value="m-18-29" id="m-18-29" type="checkbox" data-ng-model='search.category' data-ng-true-value="'M-18-29'">
+                  <label for="m-18-29">M-18-29</label>
+              </div>
+
+              <div class="cat-item">
+                  <input value="m-30-39" id="m-30-39" type="checkbox" data-ng-model='search.category' data-ng-true-value="'M-30-39'">
+                  <label for="m-30-39">M-30-39</label>
+              </div>
+
+              <div class="cat-item">
+                  <input value="m-40-49" id="m-40-49" type="checkbox" data-ng-model='search.category' data-ng-true-value="'M-40-49'">
+                  <label for="m-40-49">M-40-49</label>
+              </div>
+
+              <div class="cat-item">
+                  <input value="m-50-59" id="m-50-59" type="checkbox" data-ng-model='search.category' data-ng-true-value="'M-50-59'">
+                  <label for="m-50-59">M-50-59</label>
+              </div>                                
+
+              <div class="cat-item">
+                  <input value="m-60-69" id="m-60-69" type="checkbox" data-ng-model='search.category' data-ng-true-value="'M-60-69'">
+                  <label for="m-60-69">M-60-69</label>
+              </div>
+
+              <div class="cat-item">
+                  <input value="m-70+" id="m-70+" type="checkbox" data-ng-model='search.category' data-ng-true-value="'M-70+'">
+                  <label for="m-70+">M-70+</label>
+              </div>                
+          </form>
+
+
+
 			</div>
 		</div>
 
@@ -95,16 +155,16 @@ date: 2015-09-22 02:07:21
           </thead>
 
           <tbody>
-            <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchName">
-              <td>{( roll.registration_number )}</td>
-              <td>{( roll.name )}</td>
-              <td>{( roll.rank )}</td>
-              <td>{( roll.category )}</td>
-              <td>{( roll.rank_category )}</td>
-              <td>{( roll.time )}</td>
-              <td>{( roll.city )}</td>
-              <td>{( roll.club )}</td>
-              <td>{( roll.country )}</td>
+            <tr ng-repeat="nitem in filterWIthSearch()">
+              <td>{( nitem.registration_number )}</td>
+              <td>{( nitem.name )}</td>
+              <td>{( nitem.rank )}</td>
+              <td>{( nitem.category )}</td>
+              <td>{( nitem.rank_category )}</td>
+              <td>{( nitem.time )}</td>
+              <td>{( nitem.city )}</td>
+              <td>{( nitem.club )}</td>
+              <td>{( nitem.country )}</td>
             </tr>
           </tbody>
 

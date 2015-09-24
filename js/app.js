@@ -15,4 +15,11 @@ App.controller('mainController', function($scope, $http) {
     $scope.sushi = res.data;
   });
 
+	$scope.filterWIthSearch = function() {
+	    var items = $filter('filter')($scope.sushi, ($scope.search||{}).category||"");
+	    items = $filter('sortType')(items, 'rank');
+	    items = $filter('searchName')(items, '');
+	    return items;
+	};
+
 });

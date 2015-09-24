@@ -15,7 +15,8 @@ module.exports = function (grunt) {
                     optimization: 2,
                     cleancss: true
                 },
-                files: {"css/lvivtenrunning.css": "less/bootstrap.less"}
+                files: [{"css/lvivtenrunning.css": "less/bootstrap.less"},
+                        {"css/lvivtenrunning-state.css": "less/bootstrap-state.less"}]
             }
         },
         watch: {

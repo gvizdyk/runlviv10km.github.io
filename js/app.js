@@ -17,7 +17,6 @@ App.controller('mainController', function($scope, $http, $filter) {
 
 	$scope.filterWIthSearch = function() {
 	    var items = $filter('filter')($scope.sushi, ($scope.search||{}).category||"");
-	    items = $filter('sortType')(items, 'rank');
 	    return items;
 	};
 

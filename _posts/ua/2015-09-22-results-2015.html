@@ -11,14 +11,18 @@ date: 2015-09-22 02:07:21
 
       <div ng-app="sortApp" ng-controller="mainController">
 
-        <form>
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-addon"><i class="fa fa-search"></i></div>
-              <input type="text" class="form-control" placeholder="Швидкий пошук" ng-model="searchName">
-            </div>
-          </div>
-        </form>
+		<div class="row">
+			<div class="col-md-6">
+			    <form>
+			      <div class="form-group">
+			        <div class="input-group">
+			          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+			          <input type="text" class="form-control" placeholder="Швидкий пошук" ng-model="searchName">
+			        </div>
+			      </div>
+			    </form>
+			</div>
+		</div>
 
         <table class="table table-hover table-striped table-results">
 
